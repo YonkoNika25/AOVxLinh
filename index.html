@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Web Đẹp</title>
+  <style>
+    /* Thiết lập nền đẹp, mượt mà như cảm xúc Gen Z */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #FF9A9E, #FAD0C4, #FBC2EB);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    #content {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+    }
+    .edit-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 10px;
+      background: #ff6f61;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .edit-btn:hover {
+      background: #ff3b2d;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 80%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Phần hiển thị chuỗi ký tự ban đầu -->
+    <div id="content">aovxlinh_linh90jufc</div>
+    <br>
+    <!-- Input và button để thay đổi chuỗi ký tự -->
+    <input type="text" id="newText" placeholder="Nhập chuỗi mới" />
+    <br>
+    <button class="edit-btn" onclick="changeText()">Thay đổi</button>
+  </div>
+
+  <script>
+    // Hàm để cập nhật nội dung chữ theo ý bạn, chỉ admin mới được phép thay đổi
+    function changeText() {
+      const password = prompt("Nhập mật khẩu admin để thay đổi chuỗi:");
+      // Thay "mypass123" bằng mật khẩu riêng của bạn
+      if (password === "mypass123") {
+        const newText = document.getElementById('newText').value.trim();
+        if(newText) {
+          document.getElementById('content').textContent = newText;
+        } else {
+          alert("Này, đừng để trống nhé!");
+        }
+      } else {
+        alert("Sai mật khẩu! Bạn không có quyền thay đổi chuỗi này đâu.");
+      }
+    }
+  </script>
+</body>
+</html>
